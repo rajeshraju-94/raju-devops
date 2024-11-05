@@ -2,3 +2,4 @@
 
 echo "hello, how are you"
 echo "hello, I am good"
+echo "bye"
