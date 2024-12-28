@@ -1,0 +1,19 @@
+students:
+ - Name: Rajesh
+   Email: rajeshraju@gmail.com
+   Addresses:
+    - type: current
+      Addressline1: Whitefield
+      Addressline2: Bangalore
+    - type: Permanent
+      Addressline1: Chittoor
+      Addressline2: Ram Nagar colony
+ - Name: Meena
+    Email: Meena@gmail.com
+    Addresses:
+    - type: current
+      Addressline1: Whitefield
+      Addressline2: Bangalore
+    - type: Permanent
+      Addressline1: Chittoor
+      Addressline2: Ram Nagar colony

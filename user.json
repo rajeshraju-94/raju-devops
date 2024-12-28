@@ -1,0 +1,37 @@
+{
+    "Students": [
+        {
+            "Name":"Rajesh Raju",
+            "Email":"rajeshraju@gmail.com",
+            "Addresses": [
+                {
+                    "type": "current",
+                    "Addressline1": "Whitefield",
+                    "Addressline2": "Naagondanahalli"
+                },
+                {
+                    "type": "permanent",
+                    "Addressline1": "Whitefield",
+                    "Addressline2": "Naagondanahalli"
+                }
+            ]
+        },
+        {
+            "Name": "Meena",
+            "Email": "Meena@gmail.com",
+            "Addresses":[
+                {
+                    "type": "current",
+                    "Addressline1": "Whitefield",
+                    "Addressline2": "Naagondanahalli"
+                },
+                {
+                    "type": "permanent",
+                    "Addressline1": "Ram Nagar colony",
+                    "Addressline2": "Chittoor"
+                }
+            ]
+        }
+        
+    ]
+}

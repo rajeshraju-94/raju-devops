@@ -1,1 +1,30 @@
-sd
+<students>
+    <student1>
+        <Name> Rajesh Raju </Name>
+        <Email> rajeshraju@gamil.com </Email>
+        <Addresses>
+            <Current>
+                <Addressline1> Whitefield </Addressline1>
+                <Addressline2> Naagondanahalli </Addressline2>
+            </Current>
+            <Permanent>
+                <Addressline1> Whitefield </Addressline1>
+                <Addressline2> Naagondanahalli </Addressline2>
+            </Permanent>
+        </AAddresses>
+    </student1>
+    <student2>
+        <Name> Meena </Name>
+        <Email> Meena@gamil.com </Email>
+        <Addresses>
+            <Current>
+                <Addressline1> Whitefield </Addressline1>
+                <Addressline2> Naagondanahalli </Addressline2>
+            </Current>
+            <Permanent>
+                <Addressline1> Whitefield </Addressline1>
+                <Addressline2> Naagondanahalli </Addressline2>
+            </Permanent>
+        </AAddresses>
+    </student2>
+</students>
