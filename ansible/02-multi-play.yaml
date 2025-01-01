@@ -1,0 +1,9 @@
+- name: 2 playbooks
+  hosts: web
+  tasks:
+    - name: first playbook
+      ansible.builtin.debug:
+        msg: "this is first play book"
+    - name: second playbook
+      ansible.builtin.debug:
+        msg: "this is secong play book"

@@ -1,6 +1,6 @@
 # this yaml file is to verify connection between ansible server to the ansible node
 - name: server node connection
-  hosts: 172.31.19.208
+  hosts: web
   tasks:
     - name: ping pong information
       ansible.builtin.ping:
