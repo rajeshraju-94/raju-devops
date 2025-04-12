@@ -1,0 +1,27 @@
+- name: Devops course information
+  hosts: local # running ansible playbook on ansible-server itself
+  connection: local # for local hosts
+  tasks:
+    - name: data types in ansible
+      vars:
+        Course: "DevOps with AWS" # string
+        Duration: 130 # number
+        topics: # list
+        - Linux
+        - Ansible
+        - Terrafrom
+        - Docker
+        - Kubernetes
+        - Jenkins
+        - Git
+        live: true # boolean
+        tools: # map / dictionary
+          ci: jenkins # string
+          cm: ansible and terraform
+          cloud: AWS
+          AWS: # list
+          - IAM
+          - VPC
+          - Load Balancer
+      ansible.builtin.debug:
+        msg: "Hi, I am learning {{Course}}, Duration is {{Duration}} and {{topics}}, live: {{live}} tools are {{tools}}"

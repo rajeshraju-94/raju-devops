@@ -1,0 +1,16 @@
+- name: verify and create user if not already exists
+  hosts: web
+  become: yes
+  tasks:
+    - name: expense user exist or not
+      ansible.builtin.command: id expense
+      register: USER  # USER is a variable that gets input from above command
+      ignore_errors: True
+
+    - name: copy user information
+      ansible.builtin.debug:
+        msg: "user info {{ USER }}"
+
+    - name: create user
+      ansible.builtin.command: adduser expense
+      when: USER.rc != 0

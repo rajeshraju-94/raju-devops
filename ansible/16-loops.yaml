@@ -1,0 +1,12 @@
+- name: ansible loops
+  hosts: web
+  tasks:
+    - name: loop syntax
+      ansible.builtin.debug:
+        msg: "Hello, {{ item }}" # item is reserved keyword for loops
+      loop:
+      - Rajesh
+      - Meena
+      - Hethansh
+      - Lakshmi
+      - Krishna

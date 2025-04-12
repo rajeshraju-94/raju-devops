@@ -1,0 +1,11 @@
+- name: Play level and task level variables
+  hosts: web
+  vars:
+    NAME: "Rajesh RAJU"
+    WIFE: "Meena"
+  tasks:
+    - name: verifying play and task level variable
+      vars: # task level variables will over ride play level variables
+        WIFE: "Amudala Meena" # here Amudala Meena is over riding with "Meena"
+      ansible.builtin.debug:
+        msg: "I am {{NAME}} and my wife name is {{WIFE}}"

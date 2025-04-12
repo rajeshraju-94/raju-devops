@@ -1,0 +1,58 @@
+- name: ansible filters
+  hosts: local
+  connection: local
+  tasks:
+    - name: print default variable
+      ansible.builtin.debug:
+        msg: "Hello, {{ course | default('Ansible') }}"
+
+    - name: covert to uppercase
+      vars:
+        greeting: "hey, Good morning!!"
+      ansible.builtin.debug:
+        msg: "{{ greeting | upper}}"
+    
+    - name: convert to lowercase
+      vars:
+        greeting: "HELLo RAJEsh Raju"
+      ansible.builtin.debug:
+        msg: "{{ greeting | lower }}"
+
+    - name: to get the unique values
+      vars:
+        numbers: [7,9,10,8,22,38,1,11,8,9,38,22]
+      ansible.builtin.debug:
+        msg: "{{ numbers | unique }}"
+    
+    - name: to get min and max numbers from list
+      vars:
+        numbers: [7,9,10,8,22,38,1,11,8,9,38,22,99]
+      ansible.builtin.debug:
+        msg: " Min: {{ numbers | min }}, Max: {{ numbers | max }}"
+
+    - name: convert map to list
+      vars:
+        family:
+          name: "Rajesh"
+          age: 30
+          wife: "Meena"
+      ansible.builtin.debug:
+        msg: "{{ family | dict2items }}"
+
+    - name: convert list to map
+      vars:
+        family:
+        - { "key": "name","value": "Rajesh" }
+        - { "key": "age","value": 30 }
+        - { "key": "wife","value": "Meena" }
+      ansible.builtin.debug:
+        msg: "{{ family | items2dict }}"
+    
+    - name: validate correct IP or not
+      vars:
+        myip: 192.168.1.1
+        myip1: 288.3.666.3
+      ansible.builtin.debug:
+        msg: "corret IP: {{ myip | ansible.utils.ipv4 }}"
+      ansible.builtin.debug:
+        msg: "wrong ip: {{ myip1 | ansible.utils.ipv4 }}"

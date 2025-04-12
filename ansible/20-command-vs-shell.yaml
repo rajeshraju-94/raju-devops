@@ -1,0 +1,13 @@
+- name: ansible command vs shell
+  hosts: local
+  connection: local
+  tasks:
+  # - name: ansible command
+  #   ansible.builtin.command: ls -ltr > /tmp/output.txt
+  #     ignore_errors: True
+  - name: ansible shell
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt # login to the server and execure command inside
+
+    # command module just issue the command, command is more secure than shell
+
+  

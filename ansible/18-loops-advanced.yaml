@@ -1,0 +1,13 @@
+- name: loos for installing apps
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: install if not and do not install if already exists
+      ansible.builtin.package:
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
+      loop:
+      - { name: 'git', state: 'present' }
+      - { name: 'mysql', state: 'absent' }
+      - { name: 'postfix', state: 'present'}

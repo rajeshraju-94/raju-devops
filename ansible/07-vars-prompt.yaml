@@ -1,0 +1,16 @@
+- name: variables from the user input
+  hosts: web
+  vars_prompt: # by default ansible user input values are confidential
+    - name: "CHILD"
+      prompt: enter child name
+      private: false # not confidential, the values user entering can see
+    - name: "AGE"
+      prompt: enter child age
+      private: false # not confidential, the values user entering can see
+    - name: "Father_Name"
+      prompt: enter father name
+      private: false # not confidential, the values user entering can see
+  tasks:
+    - name: read values from the user input
+      ansible.builtin.debug:
+        msg: "my child name is {{CHILD}} and his age is {{AGE}} and his father name is {{Father_Name}}"
